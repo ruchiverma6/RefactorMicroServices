@@ -12,12 +12,13 @@ before_install:
     - chmod +x docker-compose
     - sudo mv docker-compose /usr/local/bin
     
+
 install: 
     - docker-compose -f docker-compose-build.yml build --parallel 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ruchidevi/udagram-user
-  - docker push ruchidevi/udagram-feed
-  - docker push ruchidevi/udagram-reverseproxy
+  - docker push ruchidevi/udagram-api-user
+  - docker push ruchidevi/udagram-api-feed
+  - docker push ruchidevi/reverseproxy
   - docker push ruchidevi/udagram-frontend
