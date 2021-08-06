@@ -3,16 +3,17 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: ruchidevi/reverseproxy:latest
+    image: ruchidevi/reverseproxy:v2
   backend_user:
     build:
       context: ./udagramuserservice
-    image: ruchidevi/udagram-api-user:latest
+    image: ruchidevi/udagram-api-user:v2
   backend_feed:
     build:
       context: ./udagramfeedservice
-    image: ruchidevi/udagram-api-feed:latest
+    image: ruchidevi/udagram-api-feed:v2
+
   frontend:
     build:
       context: ./udagram-frontend
-    image: ruchidevi/udagram-frontend:latest
+    image: ruchidevi/udagram-frontend:v2
