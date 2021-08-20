@@ -16,4 +16,4 @@ services:
   frontend:
     build:
       context: ./udagram-frontend
-    image: ruchidevi/udagram-frontend:v14
+    image: ruchidevi/udagram-frontend:v15
